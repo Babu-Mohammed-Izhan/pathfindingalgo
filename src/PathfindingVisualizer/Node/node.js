@@ -1,5 +1,5 @@
 import React from "react";
-import "./Node.css";
+import "./node.css";
 
 const Node = ({
   col,
@@ -12,7 +12,7 @@ const Node = ({
   onMouseUp,
 }) => {
   const extraClassName = isFinish
-    ? "node-finsh"
+    ? "node-finish"
     : isStart
     ? "node-start"
     : isWall

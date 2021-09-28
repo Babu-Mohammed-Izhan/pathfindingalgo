@@ -1,3 +1,24 @@
 .grid {
-  margin: 100px 0 0;
+  margin: 50px 0 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.button {
+  margin: 0px 40px;
+  min-height: 40px;
+  color: white;
+  background-color: rgba(0, 217, 159, 0.75);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 30px;
 }

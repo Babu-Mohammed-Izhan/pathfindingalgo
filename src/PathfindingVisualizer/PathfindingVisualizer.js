@@ -4,11 +4,11 @@ import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 import "./PathfindingVisualizer.css";
 
 const START_NODE_ROW = 10;
-const START_NODE_COL = 15;
+const START_NODE_COL = 10;
 const FINISH_NODE_ROW = 10;
-const FINISH_NODE_COL = 35;
+const FINISH_NODE_COL = 40;
 
-const getInitialGrd = () => {
+const getInitialGrid = () => {
   const grid = [];
   for (let row = 0; row < 20; row++) {
     const currentRow = [];
@@ -48,7 +48,7 @@ const PathfindingVisualizer = () => {
   const [grid, setgrid] = useState([]);
   const [mouseisPressed, setmouseisPressed] = useState(false);
   useEffect(() => {
-    const grid = getInitialGrd();
+    const grid = getInitialGrid();
     setgrid(grid);
   }, []);
 
@@ -59,7 +59,7 @@ const PathfindingVisualizer = () => {
   };
 
   const handleMouseEnter = (row, col) => {
-    if (mouseisPressed) return;
+    if (!mouseisPressed) return;
     const newGrid = getNewGridWithWallToggled(grid, row, col);
     setgrid(newGrid);
   };
@@ -98,15 +98,30 @@ const PathfindingVisualizer = () => {
     const startNode = grid[START_NODE_ROW][START_NODE_COL];
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
+    console.log(visitedNodesInOrder);
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
   };
 
+  const clearGrid = () => {
+    window.location.reload(true);
+  };
+
   return (
     <>
-      <button onClick={() => visualizeDijkstra()}>
-        Visualize Dijkstra's Algorithm
-      </button>
+      <nav className="navbar">
+        <div>
+          <h1 className="title">Path Finding Algorithm</h1>
+        </div>
+        <div>
+          <button className="button" onClick={() => visualizeDijkstra()}>
+            Visualize Dijkstra's Algorithm
+          </button>
+          <button className="button" onClick={() => clearGrid()}>
+            Clear the Grid
+          </button>
+        </div>
+      </nav>
       <div className="grid">
         {grid.map((row, rowIdx) => {
           return (
