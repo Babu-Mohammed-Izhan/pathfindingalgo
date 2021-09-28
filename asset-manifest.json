@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pathfindingalgo/static/css/main.d87f515d.chunk.css",
+    "main.js": "/pathfindingalgo/static/js/main.5af807cd.chunk.js",
+    "main.js.map": "/pathfindingalgo/static/js/main.5af807cd.chunk.js.map",
+    "runtime-main.js": "/pathfindingalgo/static/js/runtime-main.66ef234f.js",
+    "runtime-main.js.map": "/pathfindingalgo/static/js/runtime-main.66ef234f.js.map",
+    "static/js/2.9572696f.chunk.js": "/pathfindingalgo/static/js/2.9572696f.chunk.js",
+    "static/js/2.9572696f.chunk.js.map": "/pathfindingalgo/static/js/2.9572696f.chunk.js.map",
+    "static/js/3.92be6ffe.chunk.js": "/pathfindingalgo/static/js/3.92be6ffe.chunk.js",
+    "static/js/3.92be6ffe.chunk.js.map": "/pathfindingalgo/static/js/3.92be6ffe.chunk.js.map",
+    "index.html": "/pathfindingalgo/index.html",
+    "static/css/main.d87f515d.chunk.css.map": "/pathfindingalgo/static/css/main.d87f515d.chunk.css.map",
+    "static/js/2.9572696f.chunk.js.LICENSE.txt": "/pathfindingalgo/static/js/2.9572696f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66ef234f.js",
+    "static/js/2.9572696f.chunk.js",
+    "static/css/main.d87f515d.chunk.css",
+    "static/js/main.5af807cd.chunk.js"
+  ]
+}
